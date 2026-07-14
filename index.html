@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#030611"
+  >
+
+  <title>Until Morning</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- AUDIO -->
+
+  <audio id="nightAudio" loop preload="auto">
+    <source src="night-ambience.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="morningAudio" loop preload="auto">
+    <source src="morning-ambience.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="voiceAudio" preload="auto">
+    <source src="voice-message.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <main id="app">
+
+    <!-- INTRO -->
+
+    <section
+      id="introScene"
+      class="scene active intro-scene"
+    >
+      <div class="grain"></div>
+
+      <div
+        id="introStars"
+        class="star-layer"
+      ></div>
+
+      <div class="intro-content">
+
+        <p class="eyebrow">
+          for ameer
+        </p>
+
+        <p
+          id="introOpening"
+          class="intro-opening"
+        >
+          Some nights change everything.
+        </p>
+
+        <h1>
+          Until Morning
+        </h1>
+
+        <p
+          id="introSubtitle"
+          class="intro-subtitle"
+        >
+          Stay long enough to see the light return.
+        </p>
+
+        <button
+          id="beginButton"
+          class="glass-button"
+        >
+          stay
+        </button>
+
+        <p class="sound-note">
+          sound on recommended
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ECLIPSE -->
+
+    <section
+      id="eclipseScene"
+      class="scene eclipse-scene"
+    >
+      <div class="eclipse-sky">
+
+        <div class="eclipse-cloud cloud-one"></div>
+        <div class="eclipse-cloud cloud-two"></div>
+
+        <div class="sun-aura"></div>
+        <div class="eclipse-sun"></div>
+        <div class="eclipse-moon"></div>
+
+        <div
+          id="eclipseStars"
+          class="star-layer eclipse-star-layer"
+        ></div>
+
+        <div
+          class="secret-star eclipse-secret-star decorative-star"
+          aria-hidden="true"
+        >
+          <span class="star-core"></span>
+          <span class="star-glow"></span>
+        </div>
+
+      </div>
+
+      <div class="eclipse-text-container">
+        <p
+          id="eclipseText"
+          class="scene-text"
+        ></p>
+      </div>
+    </section>
+
+
+    <!-- LAKE -->
+
+    <section
+      id="lakeScene"
+      class="scene lake-scene"
+    >
+      <div class="lake-night-sky">
+
+        <div
+          id="lakeStars"
+          class="star-layer"
+        ></div>
+
+        <div class="lake-moon"></div>
+
+        <button
+          id="lakeSecretStar"
+          class="secret-star lake-secret-star"
+          aria-label="A bright hidden star"
+        >
+          <span class="star-core"></span>
+          <span class="star-glow"></span>
+        </button>
+
+      </div>
+
+      <div class="distant-mountains">
+        <div class="mountain mountain-one"></div>
+        <div class="mountain mountain-two"></div>
+        <div class="mountain mountain-three"></div>
+      </div>
+
+      <div
+        id="lake"
+        class="lake-water"
+      >
+        <div class="moon-reflection"></div>
+        <div class="water-shimmer"></div>
+        <div class="lake-mist"></div>
+
+        <div
+          id="rippleLayer"
+          class="ripple-layer"
+        ></div>
+
+        <div
+          id="fallingStar"
+          class="falling-star"
+        ></div>
+
+        <div
+          id="secretWaterRipple"
+          class="secret-water-ripple"
+        ></div>
+
+        <div
+          id="secretLakeMessage"
+          class="secret-lake-message"
+        >
+          <p class="secret-heading">
+            You found it.
+          </p>
+
+          <p>
+            The one light that stayed.
+          </p>
+
+          <p>
+            Even when everything else changed,
+            this one never did.
+          </p>
+
+          <p>
+            Maybe that is why I know
+            I would always find you.
+          </p>
+
+          <p>
+            No matter the sky.
+            No matter the lifetime.
+          </p>
+
+          <p class="secret-ending">
+            I would recognize your light anywhere.
+          </p>
+        </div>
+      </div>
+
+      <div class="lake-heading">
+        <p class="lake-title">
+          The water remembers.
+        </p>
+
+        <p
+          id="lakeSubtitle"
+          class="lake-subtitle"
+        >
+          Touch the lake.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- SUNRISE -->
+
+    <section
+      id="sunriseScene"
+      class="scene sunrise-scene"
+    >
+      <div class="sunrise-sky">
+
+        <div
+          id="sunriseStars"
+          class="star-layer sunrise-star-layer"
+        ></div>
+
+        <div
+          class="secret-star sunrise-secret-star decorative-star"
+          aria-hidden="true"
+        >
+          <span class="star-core"></span>
+          <span class="star-glow"></span>
+        </div>
+
+        <div class="setting-moon"></div>
+        <div class="rising-sun"></div>
+        <div class="horizon-light"></div>
+
+        <div class="morning-cloud morning-cloud-one"></div>
+        <div class="morning-cloud morning-cloud-two"></div>
+
+      </div>
+
+      <div class="sunrise-mountains">
+        <div class="mountain morning-mountain-one"></div>
+        <div class="mountain morning-mountain-two"></div>
+        <div class="mountain morning-mountain-three"></div>
+      </div>
+
+      <div class="sunrise-water">
+        <div class="silver-reflection"></div>
+        <div class="gold-reflection"></div>
+        <div class="morning-water-shimmer"></div>
+      </div>
+
+      <div class="sunrise-text-container">
+        <p
+          id="sunriseText"
+          class="scene-text sunrise-text"
+        >
+          The night never lasts forever.
+        </p>
+      </div>
+
+      <div
+        id="voiceStatus"
+        class="voice-status"
+      ></div>
+
+      <button
+        id="voiceButton"
+        class="glass-button voice-button"
+      >
+        listen to one last thing
+      </button>
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section
+      id="finalScene"
+      class="scene final-scene"
+    >
+      <div class="final-sky"></div>
+      <div class="final-horizon"></div>
+
+      <div class="final-content">
+
+        <p class="final-date">
+          May 6, 2024
+        </p>
+
+        <div class="date-line"></div>
+
+        <p class="final-date">
+          July 13, 2024
+        </p>
+
+        <div class="date-line"></div>
+
+        <p class="final-date">
+          Two years later
+        </p>
+
+        <h2>
+          I would still choose you.
+        </h2>
+
+        <p class="final-signoff">
+          Happy anniversary, Ameer.
+        </p>
+
+      </div>
+
+      <button
+        id="finalSecretStar"
+        class="secret-star final-secret-star"
+        aria-label="A final hidden star"
+      >
+        <span class="star-core"></span>
+        <span class="star-glow"></span>
+      </button>
+
+      <div
+        id="finalSecretOverlay"
+        class="final-secret-overlay"
+      >
+        <div class="final-secret-message">
+
+          <p class="secret-heading">
+            You found me again.
+          </p>
+
+          <p>
+            I like to think that is what
+            we have always done.
+          </p>
+
+          <p>
+            No matter how far apart life felt,
+            somehow we always found our way back.
+          </p>
+
+          <p>
+            So if there are a thousand nights
+            after this one,
+            and a thousand more mornings...
+          </p>
+
+          <p>
+            I hope we keep finding each other.
+          </p>
+
+          <p class="secret-ending">
+            Again, and again, and again.
+          </p>
+
+          <button
+            id="closeSecretButton"
+            class="close-secret-button"
+          >
+            return to morning
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
